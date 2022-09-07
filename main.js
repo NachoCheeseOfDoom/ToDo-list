@@ -1,4 +1,4 @@
-let todos = ['Get Groceries', 'Wash Car', 'Make Dinner'];
+let todos = [];
 let todo1 = 'Get Groceries';
 let todo2 = 'Wash Car';
 let todo3 = 'Make Dinner';
@@ -9,8 +9,9 @@ let BtnPress = document.getElementById("pressBtn");
 
 BtnPress.addEventListener("click", function () {
   let newText = inputEL.value;
+  inputEL.value = '';
   todos.push(newText);
-  console.log(todos)
+  addTodo(todos);
 });
 
 function addTodo(todoTitle) {
