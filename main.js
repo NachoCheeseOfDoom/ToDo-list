@@ -2,13 +2,15 @@ let todos = ['Get Groceries', 'Wash Car', 'Make Dinner'];
 let todo1 = 'Get Groceries';
 let todo2 = 'Wash Car';
 let todo3 = 'Make Dinner';
+todos.push('hi');
 
 let inputEL = document.getElementById("input-el");
 let BtnPress = document.getElementById("pressBtn");
 
 BtnPress.addEventListener("click", function () {
-  todos.push(inputEL.value);
-  //todoTitle();
+  let newText = inputEL.value;
+  todos.push(newText);
+  console.log(todos)
 });
 
 function addTodo(todoTitle) {
@@ -17,8 +19,8 @@ function addTodo(todoTitle) {
   document.body.appendChild(element)
 }
 
-console.log(todos)
 
 for (let i = 0; i < todos.length; i++) {
   addTodo(todos[i])
+  console.log(todos)
 }
