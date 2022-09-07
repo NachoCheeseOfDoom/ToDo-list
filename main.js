@@ -15,12 +15,18 @@ todos.forEach(function (todoTitle) {
   document.body.appendChild(element)
 });
 
-function addTodo(todoTitle) {
-
-}
-
 
 // for (let i = 0; i < todos.length; i++) {
 //   addTodo(todos[i])
 //   console.log(todos)
 // }
+
+function toUpper(stringArr) {
+  let newArray = []
+  stringArr.forEach(function (str) {
+    newArray.push(str.toUpperCase());
+  });
+  console.log(newArray);
+}
+
+toUpper(['hi', 'there', 'fsd']);
